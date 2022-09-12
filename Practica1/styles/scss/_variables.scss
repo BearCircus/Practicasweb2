@@ -1,0 +1,33 @@
+//variables
+$primary: rgb(53, 156, 190);
+$secondary: lightgreen;
+$error: red;
+$info: yellow;
+
+
+
+//colors
+$colors: (
+  "primary": $primary,
+  "secondary": lightgreen,
+  "error": red,
+  "info": yellow,
+  "blue": blue,
+  "red": red,
+  "orange": orange,
+  "purple": purple,
+  "gray": gray,
+  "black": black,
+  "white": white,
+);
+
+//spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+//borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+$base-box-shadow: 1px 3px 5px black;
+$base-font-size: 1rem;
