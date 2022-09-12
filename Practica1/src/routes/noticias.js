@@ -1,6 +1,7 @@
 const axios = require("axios");
 const app = require("express")();
 const router = require("express").Router();
+const { engine } = require("express-handlebars");
 
 async function getNews(req, res) {
   let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.API_KEY}`;
@@ -12,7 +13,8 @@ async function getNews(req, res) {
 app.get("/", (req, res) => {
   const news = getNews(req, res);
   console.log(typeof news);
-  res.send(202);
+  // res.render("index", { title: news });
+  res.send(news);
 });
 
 module.exports = app;
