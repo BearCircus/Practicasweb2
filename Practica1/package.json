@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "local": "nodemon ."
+    "local": "nodemon .",
+    "styles": "sass styles/scss:styles/css --no-source-map --watch"
   },
   "author": "Isaac",
   "license": "ISC",
