@@ -1,5 +1,12 @@
 <h3>{{title}}</h3>
 
 <div class="container">
-      .row
+  {{#each articles}}
+    <img src="{{this.urlToImage}}" alt="{{this.title}}" loading="lazy" />
+    <div class="card col-4-xs col-4-sm col-6-xl">
+      <h3 class="card-title">{{this.title}}</h3>
+      <p>{{this.description}}</p>
+      <a href="{{this.url}}" target="_blank">See more</a>
+    </div>
+  {{/each}}
 </div>
