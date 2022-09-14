@@ -1,13 +1,13 @@
 const express = require("express");
 const path = require("path");
 const { engine } = require("express-handlebars");
-const routes = require("./src/routes/routes");
+const routes = require("./src/routes/noticias");
 require("dotenv").config();
 
 const app = express();
 
 //routes
-app.use("/api", routes);
+app.use("/noticias", routes);
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
@@ -16,8 +16,8 @@ app.use("/assets", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   //res.send("Pre engine");
-  res.render("index", { title: "Post engine" });
-  //fetch noticias
+  // res.render("index", { title: "Post engine" });
+  res.sendStatus(202);
 });
 
 app.listen(1234, () => {
