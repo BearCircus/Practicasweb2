@@ -15,8 +15,6 @@ app.set("views", "./views"); //not really necessary but we want to make sure the
 app.use("/assets", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  //res.send("Pre engine");
-  // res.render("index", { title: "Post engine" });
   res.sendStatus(202);
 });
 
