@@ -11,12 +11,9 @@ app.use("/noticias", routes);
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
-app.set("views", "./views"); //not really necessary but we want to make sure the folder's name is views
-app.use("/assets", express.static(path.join(__dirname, "public")));
+app.use(express.static("styles/css"));
 
 app.get("/", (req, res) => {
-  //res.send("Pre engine");
-  // res.render("index", { title: "Post engine" });
   res.sendStatus(202);
 });
 
