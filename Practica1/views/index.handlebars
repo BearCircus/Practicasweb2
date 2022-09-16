@@ -4,12 +4,20 @@
 </div>
 
 <div class="container">
-  {{#each articles}}
-    <div class="card col-4-xs col-4-sm col-6-xl">
-      <h3 class="card-title">{{this.title}}</h3>
-      <img class="newsImage" src="{{this.urlToImage}}" alt="{{this.title}}" />
-      <p>{{this.description}}</p>
-      <a href="{{this.url}}" target="_blank">See more</a>
-    </div>
-  {{/each}}
+  <div class="row gap-2 justify-flex-end">
+    {{#each articles}}
+      <div class="col-3-xs col-3-sm col-4-xl">
+        <div class="card">
+          <h3 class="card-title">{{this.title}}</h3>
+          <img
+            class="newsImage"
+            src="{{this.urlToImage}}"
+            alt="{{this.title}}"
+          />
+          <p>{{this.description}}</p>
+          <a href="{{this.url}}" target="_blank">See more</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
