@@ -426,4 +426,5 @@
 .newsImage {
   width: 50rem;
   height: auto;
+  max-width: 100%;
 }
